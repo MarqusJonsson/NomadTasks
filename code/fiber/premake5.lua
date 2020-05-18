@@ -17,7 +17,7 @@ project "nomad-fiber"
 		set_proj("fiber")
 	end
     targetname "nomad-fiber"
-    targetdir "../../bin/%{cfg.buildcfg}/%{cfg.platform}"
+    --targetdir "../../bin/%{cfg.buildcfg}/%{cfg.platform}"
 	
     vpaths { ["*"] = "*" }
 

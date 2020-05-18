@@ -4,9 +4,13 @@ project "optick"
 	kind "SharedLib"
 	staticruntime "off"
 	
-	location "../../build/vendor"
-	objdir "../../build/vendor/obj/%{prj.name}"
-	targetdir "../../bin/%{cfg.buildcfg}"
+	--location "../../build/dependencies"
+	--objdir "../../build/vendor/obj/%{prj.name}"
+	--targetdir "../../bin/%{cfg.buildcfg}"
+	
+	--location(OPTICK_DIR)
+	--targetdir (BUILD_DIR .. "/bin/" .. "%{cfg.architecture}/%{cfg.buildcfg}")
+	--objdir (BUILD_DIR .. "/obj/" .. "%{cfg.architecture}/%{cfg.buildcfg}")
 	
 	defines { 
 		"_CRT_SECURE_NO_WARNINGS",
